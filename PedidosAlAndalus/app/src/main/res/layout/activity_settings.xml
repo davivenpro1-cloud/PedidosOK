@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="24dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Número de WhatsApp (con prefijo del país, ej: 34600111222)"
+        android:textSize="16sp"
+        android:layout_marginBottom="8dp" />
+
+    <EditText
+        android:id="@+id/campoTelefono"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="phone"
+        android:hint="34600111222" />
+
+    <Button
+        android:id="@+id/botonGuardarTelefono"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Guardar" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginVertical="24dp"
+        android:background="#DDDDDD" />
+
+    <Button
+        android:id="@+id/botonAccesibilidad"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Activar envío automático (accesibilidad)" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:textSize="13sp"
+        android:textColor="#666666"
+        android:text="Para que los mensajes programados se envíen solos (sin tocar nada), hay que activar este permiso una sola vez." />
+
+</LinearLayout>

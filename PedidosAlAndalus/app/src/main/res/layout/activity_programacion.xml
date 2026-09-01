@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Mensaje a enviar"
+            android:textSize="16sp"
+            android:layout_marginBottom="8dp" />
+
+        <EditText
+            android:id="@+id/campoMensaje"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minLines="3"
+            android:gravity="top"
+            android:hint="Ej: Pedido de siempre: 2 cajas de aceite, 1 caja de aceitunas" />
+
+        <RadioGroup
+            android:id="@+id/grupoTipo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="16dp">
+
+            <RadioButton
+                android:id="@+id/opcionFechaConcreta"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:checked="true"
+                android:text="Un día en concreto" />
+
+            <RadioButton
+                android:id="@+id/opcionSemanal"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Cada semana" />
+        </RadioGroup>
+
+        <LinearLayout
+            android:id="@+id/bloqueFechaConcreta"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="16dp">
+
+            <Button
+                android:id="@+id/botonElegirFecha"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginEnd="8dp"
+                android:text="Elegir fecha" />
+
+            <Button
+                android:id="@+id/botonElegirHoraUnico"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="8dp"
+                android:text="Elegir hora" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/textoFechaElegida"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:textStyle="italic"
+            android:text="Sin fecha seleccionada" />
+
+        <LinearLayout
+            android:id="@+id/bloqueSemanal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone"
+            android:layout_marginTop="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Días de la semana"
+                android:layout_marginBottom="4dp" />
+
+            <GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:columnCount="4">
+
+                <CheckBox android:id="@+id/diaLun" android:text="Lun" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+                <CheckBox android:id="@+id/diaMar" android:text="Mar" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+                <CheckBox android:id="@+id/diaMie" android:text="Mié" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+                <CheckBox android:id="@+id/diaJue" android:text="Jue" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+                <CheckBox android:id="@+id/diaVie" android:text="Vie" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+                <CheckBox android:id="@+id/diaSab" android:text="Sáb" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+                <CheckBox android:id="@+id/diaDom" android:text="Dom" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+            </GridLayout>
+
+            <Button
+                android:id="@+id/botonElegirHoraSemanal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Elegir hora" />
+
+            <TextView
+                android:id="@+id/textoHoraSemanal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:textStyle="italic"
+                android:text="Sin hora seleccionada" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/botonProgramar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:backgroundTint="@color/verde_whatsapp"
+            android:text="Programar mensaje" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginVertical="24dp"
+            android:background="#DDDDDD" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Mensajes programados"
+            android:textSize="16sp"
+            android:layout_marginBottom="8dp" />
+
+        <TextView
+            android:id="@+id/textoListaVacia"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Todavía no hay ningún mensaje programado."
+            android:textStyle="italic"
+            android:visibility="gone" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/listaProgramados"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+</ScrollView>

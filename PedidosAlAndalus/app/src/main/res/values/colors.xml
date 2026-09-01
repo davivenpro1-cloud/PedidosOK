@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="verde_whatsapp">#25D366</color>
+    <color name="verde_oscuro">#128C7E</color>
+    <color name="fondo">#F5F5F5</color>
+    <color name="texto_principal">#212121</color>
+</resources>
